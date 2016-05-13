@@ -4,11 +4,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"testing"
 
 	"github.com/blevesearch/bleve"
-	"github.com/yanyiwu/gojieba"
+	"github.com/yourhe/gojieba"
 )
 
+func TestJiebaCutForSearch(t *testing.T) {
+	Example()
+}
 func Example() {
 	INDEX_DIR := "gojieba.bleve"
 	messages := []struct {
@@ -47,6 +51,7 @@ func Example() {
 			"dictpath":     gojieba.DICT_PATH,
 			"hmmpath":      gojieba.HMM_PATH,
 			"userdictpath": gojieba.USER_DICT_PATH,
+			"mode":         1,
 			"type":         "gojieba",
 		},
 	)
@@ -77,7 +82,7 @@ func Example() {
 	querys := []string{
 		"你好世界",
 		"亲口交代",
-		"长江",
+		"长江大桥",
 	}
 
 	for _, q := range querys {

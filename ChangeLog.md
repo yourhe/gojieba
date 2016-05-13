@@ -41,7 +41,7 @@ Upgrade to fix potential trouble:
 
 ## v0.10.2
 
-1. Fix error in `go vet` 
+1. Fix error in `go vet`
 2. Upgrade limonp to v0.5.4 and cppjieba to v4.5.0 to support more unicode character
 
 ## v0.10.1

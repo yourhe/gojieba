@@ -6,7 +6,10 @@ import (
 )
 
 var (
-	DICT_DIR        = path.Join(os.Getenv("GOPATH"), "src/github.com/yanyiwu/gojieba/dict")
+	WD, _    = os.Getwd()
+	DICT_DIR = path.Join(WD, "./dict")
+	// DICT_DIR = path.Join(os.Getenv("GOPATH"), "./dict")
+
 	DICT_PATH       = path.Join(DICT_DIR, "jieba.dict.utf8")
 	HMM_PATH        = path.Join(DICT_DIR, "hmm_model.utf8")
 	USER_DICT_PATH  = path.Join(DICT_DIR, "user.dict.utf8")
